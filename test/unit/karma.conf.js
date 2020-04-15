@@ -7,13 +7,14 @@ module.exports = function(config) {
         timeout: 40000
       }
     },
-    browsers: ['HeadlessChrome'],
-    customLaunchers: {
-      HeadlessChrome: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
+    // 没有翻墙软件，无法访问到google地图，所以手动开启chrome进行测试，因为chrome上装了插件
+    // browsers: ['HeadlessChrome'],
+    // customLaunchers: {
+    //   HeadlessChrome: {
+    //     base: 'ChromeHeadless',
+    //     flags: ['--no-sandbox']
+    //   }
+    // },
     frameworks: ['mocha', 'sinon-chai'],
     reporters: ['spec'],
     files: ['./index.js'],

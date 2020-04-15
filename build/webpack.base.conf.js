@@ -9,7 +9,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    'vue-googlemap': ['./src/lib/index.js']
+    '@vue-map/google': ['./src/lib/index.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -29,7 +29,7 @@ module.exports = {
       '@': resolve('src'),
       'src': path.resolve(__dirname, '../src'),
       demos: path.join(__dirname, '../src/homepage/demos'),
-      'vue-googlemap': path.join(__dirname, '../src/lib')
+      '@vue-map/google': path.join(__dirname, '../src/lib')
     },
     modules: [resolve('src'), "node_modules"]
   },

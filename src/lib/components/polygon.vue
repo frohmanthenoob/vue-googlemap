@@ -19,7 +19,6 @@ export default {
     strokeWeight: Number,
     visible: Boolean,
     zIndex: Number,
-    geodesic: Boolean,
 
     path: Array,
     events: Object

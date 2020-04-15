@@ -1,20 +1,10 @@
-<p align="center">
-  <img src="https://cdn.rawgit.com/ElemeFE/vue-amap/master/src/docs/assets/images/logo.png">
-</p>
+# @vue-map/google
 
-# vue-map
-[![Build Status](https://travis-ci.org/ElemeFE/vue-amap.svg?branch=master)](https://travis-ci.org/ElemeFE/vue-amap)
-[![npm package](https://img.shields.io/npm/v/vue-amap.svg)](https://www.npmjs.org/package/vue-amap)
-[![NPM downloads](http://img.shields.io/npm/dm/vue-amap.svg)](https://npmjs.org/package/vue-amap)
-![JS gzip size](http://img.badgesize.io/https://unpkg.com/vue-amap/src/lib/index.js?compression=gzip&label=gzip%20size:%20JS)
-[![license](https://img.shields.io/github/license/elemefe/vue-amap.svg?style=flat-square)](https://github.com/ElemeFE/vue-amap)
-[![GitHub stars](https://img.shields.io/github/stars/elemefe/vue-amap.svg?style=social&label=Star)](https://github.com/ElemeFE/vue-amap)
-
-> vue-googlemap是一套基于Vue 2.0和谷歌地图的地图组件。
+> @vue-map/google是一套基于Vue 2.0和谷歌地图的地图组件。
 
 ## 安装
 ```
-npm install -S vue-googlemap
+npm i @vue-map/google
 ```
 
 ## 文档
@@ -23,18 +13,18 @@ npm install -S vue-googlemap
 
 ## 快速上手
 
-引入vue-googlemap
+引入@vue-map/google
 
 ```javascript
 // 引入vue-googlemap
-import VueMap from 'vue-googlemap';
-Vue.use(VueMap);
+import VueMap from '@vue-map/google'
+Vue.use(VueMap)
 
 // 初始化vue-googlemap
 VueMap.initMapApiLoader({
   // 谷歌的key
   key: 'YOUR_KEY'
-});
+})
 ```
 
 ## 组件

@@ -24,7 +24,7 @@ module.exports = merge(baseWebpackConfig, {
       'process.env': config.dev.env
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vue-googlemap'],
+      name: ['@vue-map/google'],
       minChunks: 2
     }),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage

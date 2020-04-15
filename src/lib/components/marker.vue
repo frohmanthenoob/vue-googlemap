@@ -1,6 +1,6 @@
 <script>
 import registerMixin from '../mixins/register-component'
-import { toIcon, toPixel } from '../utils/convert-helper'
+import { toIcon, toPixel, lngLatTo } from '../utils/convert-helper'
 
 export default {
   name: 'VueMapMarker',
@@ -17,7 +17,8 @@ export default {
     'zIndex',
     'opacity',
     'offset',
-    'events'
+    'events',
+    'clickable'
   ],
   data() {
     return {
@@ -45,6 +46,9 @@ export default {
   methods: {
     __initComponent(options) {
       this.$mapComponent = new google.maps.Marker(options)
+    },
+    $$getPosition() {
+      return lngLatTo(this.$mapComponent.getPosition())
     }
   },
   render() {

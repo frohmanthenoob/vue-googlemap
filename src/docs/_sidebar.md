@@ -2,7 +2,7 @@
  - [安装](zh-cn/introduction/install)
  - [快速上手](zh-cn/introduction/quick-start)
  - [脚本初始化](zh-cn/introduction/init)
- - [兼容高德原生 SDK](zh-cn/introduction/compatible)
+ - [兼容谷歌原生 SDK](zh-cn/introduction/compatible)
 - 基础
  - [地图](zh-cn/base/map)
 
@@ -24,5 +24,3 @@
  - 窗体
    - [信息窗体 - 切换](zh-cn/examples/windows/info-window.md)
    - [信息窗体 - 自定义样式](zh-cn/examples/windows/info-window-custom-content.md)
-
-- [FAQ](zh-cn/faq.md)

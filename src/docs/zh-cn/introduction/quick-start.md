@@ -2,7 +2,7 @@
 
 ---
 
-本节将介绍如何在项目中使用 vue-googlemap。
+本节将介绍如何在项目中使用 @vue-map/google。
 
 
 ## 1 - 项目结构
@@ -37,7 +37,7 @@ index.html
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>vue-googlemap-starter</title>
+    <title>@vue-map/google-starter</title>
   </head>
   <body>
     <div id="app"></div>
@@ -49,13 +49,13 @@ index.html
 package.json
 ```json
 {
-  "name": "vue-googlemap-starter",
+  "name": "@vue-map/google-starter",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 9876",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue-googlemap": "^0.0.1",
+    "@vue-map/google": "^0.0.1",
     "vue": "^2.0.5"
   },
   "devDependencies": {
@@ -129,12 +129,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-## 2 - 引入vue-googlemap
+## 2 - 引入@vue-map/google
 
 main.js
 ```javascript
 import Vue from 'vue';
-import VueMap from 'vue-googlemap';
+import VueMap from '@vue-map/google';
 import App from './App.vue';
 
 Vue.use(VueMap);
@@ -163,7 +163,7 @@ App.vue
 export default {
   data () {
     return {
-      msg: 'vue-googlemap向你问好！'
+      msg: '@vue-map/google向你问好！'
     }
   }
 }

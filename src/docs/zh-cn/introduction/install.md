@@ -7,7 +7,7 @@
 推荐 npm 安装。
 
 ```
-npm install vue-googlemap --save
+npm i @vue-map/google
 ```
 
 ## 谷歌插件安装

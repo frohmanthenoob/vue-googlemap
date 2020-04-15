@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     __initComponent(options) {
-      console.log('circle', options)
       this.$mapComponent = new google.maps.Circle(options)
     },
     $$getBounds() {

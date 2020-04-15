@@ -69,7 +69,6 @@
 名称 | 类型 | 说明
 ---|---|---|
 vid | String | 组件的ID。
-bubble | Boolean | 是否将覆盖物的鼠标或touch等事件冒泡到地图上（自v1.3 新增）默认值：false
 
 ## 动态属性
 支持响应式。
@@ -77,45 +76,43 @@ bubble | Boolean | 是否将覆盖物的鼠标或touch等事件冒泡到地图�
 名称 | 类型 | 说明
 ---|---|---|
 visible | Boolean | 是否可见
+clickable | Boolean | 是否可点击
+draggable | Boolean | 是否可以拖拽
 editable | Boolean | 当前圆形是否可编辑
 center | LngLat | 圆心位置
 radius | Number | 圆半径，单位:米
-zIndex | Number | 层叠顺序默认zIndex:10
-strokeColor | String | 线条颜色，使用16进制颜色代码赋值。默认值为#006600
-strokeOpacity | Float | 轮廓线透明度，取值范围[0,1]，0表示完全透明，1表示不透明。默认为0.9
+zIndex | Number | 层叠顺序
+strokeColor | String | 线条颜色，使用16进制颜色代码赋值。
+strokeOpacity | Float | 轮廓线透明度，取值范围[0,1]，0表示完全透明，1表示不透明。
 strokeWeight | Number | 轮廓线宽度
-fillColor | String | 圆形填充颜色,使用16进制颜色代码赋值。默认值为#006600
-fillOpacity | Float | 圆形填充透明度，取值范围[0,1]，0表示完全透明，1表示不透明。默认为0.9
-strokeStyle | String | 轮廓线样式，实线:solid，虚线:dashed
-extData | Any | 用户自定义属性，支持JavaScript API任意数据类型，如Circle的id等
+fillColor | String | 圆形填充颜色,使用16进制颜色代码赋值。
+fillOpacity | Float | 圆形填充透明度，取值范围[0,1]，0表示完全透明，1表示不透明。
 
 ## ref 可用方法
 提供无副作用的同步帮助方法
 
 函数 | 返回 | 说明
 ---|---|---|
-$$getInstance() | [AMap.Circle](http://lbs.amap.com/api/javascript-api/reference/overlay#Circle) | 获取`circle`实例
+$$getInstance() | [google.maps.Circle](https://developers.google.cn/maps/documentation/javascript/reference/polygon#Circle) | 获取`circle`实例
 $$getCenter() | [lng:Number,lat:Number] | 获取 `circle` 圆心坐标
-
+$$getBounds() | [[lng:Number,lat:Number], [lng:Number,lat:Number]]| 边界
+$$getRadius() | Number | 获取半径
 
 ## 事件
 
 事件 | 参数 | 说明
 ---|---|---|
 init | Object | 组件实例
-click | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 鼠标左键单击事件
-dblclick | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 鼠标左键双击事件
-rightclick | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 右键单击
-hide | {type, target} | 隐藏
-show | {type, target} | 显示
-mousedown | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 鼠标按下
-mouseup | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 鼠标抬起
-mouseover | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 鼠标经过
-mouseout | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 鼠标移出
-change | {type, target} | 属性发生变化时
-touchstart | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 触摸开始时触发事件，仅适用移动设备
-touchmove | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 触摸移动进行中时触发事件，仅适用移动设备
-touchend | [MapsEvent](http://lbs.amap.com/api/javascript-api/reference/event/#MapsEvent) | 触摸结束时触发事件，仅适用移动设备
-move | {type, target, lnglat}	|编辑状态下， 拖拽圆心调整圆形位置时触发此事件type: 事件类型 target: 发生事件的目标对象 lnglat: 调整后圆的圆心坐标
-adjust | 	{type, target, radius} |	编辑状态下，鼠标调整圆形半径时，触发此事件 type: 事件类型  target: 发生事件的目标对象 radius: 调整后圆的半径，单位：米
-end | {type,target}| 关闭编辑状态时，该方法后触发，target即为编辑后的圆对象
+click | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标左键单击事件
+dblclick | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标左键双击事件
+rightclick | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 右键单击
+mousedown | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标按下
+mouseup | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标抬起
+mouseover | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标经过
+mouseout | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标移出
+mousemove | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标移动
+dragstart | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 开始拖拽圆时触发事件
+drag | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标拖拽移动圆时触发事件
+dragend | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 圆拖拽移动结束触发事件
+center_changed | | 圆心坐标改变触发事件
+radius_changed | | 圆半径改变触发事件

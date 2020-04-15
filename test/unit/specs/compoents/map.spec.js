@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { MapManager } from 'vue-googlemap'
+import { MapManager } from '@vue-map/google'
 
 describe('google.maps.Map', function() {
 

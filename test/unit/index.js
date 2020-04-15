@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueMap from 'vue-googlemap'
+import VueMap from '@vue-map/google'
 import { initMap } from './utils'
 Vue.use(VueMap)
 initMap()
@@ -13,5 +13,5 @@ testsContext.keys().forEach(testsContext)
 // require all src files except main.js for coverage.
 // you can also change this to match only the subset of files that
 // you want coverage for.
-const srcContext = require.context('vue-googlemap', true, /^\.\/(?!main(\.js)?$)/)
+const srcContext = require.context('@vue-map/google', true, /^\.\/(?!main(\.js)?$)/)
 srcContext.keys().forEach(srcContext)
