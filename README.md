@@ -8,7 +8,7 @@ npm i @vue-map/google
 ```
 
 ## 文档
-[https://penghang.github.io/vue-googlemap](https://elemefe.github.io/vue-googlemap)
+[https://penghang.github.io/vue-googlemap](https://penghang.github.io/vue-googlemap)
 
 
 ## 快速上手
