@@ -1,6 +1,6 @@
 {
   "name": "@vue-map/google",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vue googlemap",
   "keywords": [
     "googlemap",
@@ -22,7 +22,7 @@
     "test:unit": "karma  start test/unit/karma.conf.js --single-run",
     "test:dev": "karma  start test/unit/karma.conf.js --single-run=false",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs -o origin"
+    "deploy": "gh-pages -d docs -t -o origin"
   },
   "repository": {
     "type": "git",
