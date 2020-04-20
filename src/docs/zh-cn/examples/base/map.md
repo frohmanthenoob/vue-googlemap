@@ -17,6 +17,8 @@ window.VueMap.initMapApiLoader({
       <vue-map
         vid="mapDemo"  
         :center="center"
+        :no-clear="true"
+        :disable-default-ui="disableDefaultUI"
         :zoom="zoom"  
         class="map-demo"
         :events="events">
@@ -41,6 +43,7 @@ window.VueMap.initMapApiLoader({
         return {
           zoom: 12,
           center: [121.59996, 31.197646],
+          disableDefaultUI: false,
           address: '',
           events: {
             click(e) {

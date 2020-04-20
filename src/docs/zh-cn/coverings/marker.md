@@ -47,6 +47,9 @@
               events: {
                 click: () => {
                   alert('click marker');
+                },
+                destroyed: () => {
+                  console.log('marker destroyed')
                 }
               },
               visible: true,

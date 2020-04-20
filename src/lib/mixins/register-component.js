@@ -35,6 +35,9 @@ export default {
 
     this.$mapComponent.setMap && this.$mapComponent.setMap(null)
     this.$mapComponent.close && this.$mapComponent.close()
+    if (this.events && this.events.destroyed) {
+      this.events.destroyed.call(this, this.$mapComponent, this)
+    }
     // this.$mapComponent.editor && this.$mapComponent.editor.close()
     this.unwatchFns.forEach(item => item())
     this.unwatchFns = []
@@ -95,7 +98,7 @@ export default {
       if (this.$options.propsData.events) {
         for (let eventName in this.events) {
           eventHelper.addListener(this.$mapComponent, eventName, (e) => {
-            this.events[eventName](e, this)
+            this.events[eventName].call(this, e, this)
           })
         }
       }
@@ -103,7 +106,7 @@ export default {
       if (this.$options.propsData.onceEvents) {
         for (let eventName in this.onceEvents) {
           eventHelper.addListenerOnce(this.$mapComponent, eventName, (e) => {
-            this.onceEvents[eventName](e, this)
+            this.onceEvents[eventName].call(this, e, this)
           })
         }
       }
@@ -189,7 +192,9 @@ export default {
       this.setPropWatchers()
       this.registerToManager()
 
-      if (this.events && this.events.init) this.events.init(this.$mapComponent, this.$map, this.mapManager || this.$parent.mapManager)
+      if (this.events && this.events.init) {
+        this.events.init.call(this, this.$mapComponent, this)
+      }
     },
 
     // helper method

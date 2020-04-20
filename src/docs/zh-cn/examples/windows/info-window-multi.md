@@ -1,4 +1,4 @@
-# 信息窗体 - 切换
+# 信息窗体 - 多窗口
 
 <vuep template="#example"></vuep>
 
@@ -15,12 +15,13 @@
           v-for="marker in markers" 
           :position="marker.position"
           :custominfo="marker.info"
-          :events="markerEvents"></vue-map-marker>
+          :events="marker.events"></vue-map-marker>
         <vue-map-info-window 
+          v-for="marker in markers" 
           :offset="offset" 
-          :position="position" 
-          :visible.sync="visible" >
-          <div class="prompt">{{info}}</div>
+          :position="marker.position" 
+          :visible.sync="marker.visible" >
+          <div class="prompt">{{marker.info}}</div>
         </vue-map-info-window>
       </vue-map>
     </div>
@@ -47,29 +48,25 @@
           zoom: 16,
           center: [121.59996, 31.197646],
           markers: [],
-          visible: false,
-          position: null,
-          offset: [0, -50],
-          info: null,
-          markerEvents: {
-            click() {
-              // 非箭头函数,事件回调时this为当前点击的VueMapMarker组件
-              self.info = this.$attrs.custominfo
-              self.position = this.$$getPosition()
-              self.visible = true
-            }
-          }
+          offset: [0, -50]
         }
       },
 
       mounted() {
         let markers = []
-        let num = 10
+        let num = 3
 
         for (let i = 0 ; i < num ; i ++) {
           markers.push({
             info: `marker-${i}`,
-            position: [121.59996, 31.197646 + i * 0.001]
+            position: [121.59396 + i * 0.005, 31.197646],
+            visible: false,
+            events: {
+              click() {
+                // 非箭头函数,事件回调时this为当前点击的VueMapMarker组件
+                markers[i].visible = true
+              }
+            }
           })
         }
 

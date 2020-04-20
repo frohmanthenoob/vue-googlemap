@@ -18,6 +18,7 @@ export default {
   data() {
     let self = this
     return {
+      listeners: [],
       tmpVm: null,
       propsRedirect: {
         autoMove: 'disableAutoPan',
@@ -65,10 +66,25 @@ export default {
 
       delete options.map
       this.$mapComponent = new google.maps.InfoWindow(options)
+      this.addInnerEvents()
       if (this.visible !== false) {
         this.$mapComponent.open(this.$map)
       }
+    },
+    addInnerEvents() {
+      this.listeners.push(this.$mapComponent.addListener('closeclick', () => {
+        this.$emit('update:visible', false)
+      }))
+    },
+    removeInnerEvents() {
+      this.listeners.forEach(listener => {
+        google.maps.event.removeListener(listener)
+      })
+      this.listeners = []
     }
+  },
+  beforeDestroy() {
+    this.removeInnerEvents()
   },
   render() {
     const slots = this.$slots.default || []

@@ -11,7 +11,8 @@
         :center="center"
         :zoom="zoom"
         class="map-demo">
-        <vue-map-info-window :position="window.position" :visible="window.visible" >
+        <vue-map-marker :position="window.position" :events="events"></vue-map-marker>
+        <vue-map-info-window :offset="window.offset" :position="window.position" :visible="window.visible" >
           <div class="info-window">
             <div class="info-window-header">
               <span class="info-window-header-title">自定义样式</span>
@@ -71,7 +72,13 @@
         return {
           zoom: 12,
           center,
+          events: {
+            click: () => {
+              this.window.visible = true
+            }
+          },
           window: {
+            offset: [0, -50],
             position: center,
             visible: true
           }

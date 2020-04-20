@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     __initComponent(options) {
-      console.log('polygon options', options)
       this.$mapComponent = new google.maps.Polygon(options)
     },
     $$getPath() {

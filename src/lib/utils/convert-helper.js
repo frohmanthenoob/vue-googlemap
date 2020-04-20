@@ -62,8 +62,11 @@ export function toIcon(options) {
       scaledSize: toSize(imageSize)
     }
   }
-  console.log('toIcon', options, icon, options === icon)
   return icon
+}
+
+export function toControlPosition(val) {
+  return google.maps.ControlPosition[val]
 }
 
 export const commonConvertMap = {
@@ -75,5 +78,6 @@ export const commonConvertMap = {
   Point: toPixel,
   Size: toSize,
   Bounds: toBounds,
-  icon: toIcon
+  icon: toIcon,
+  ControlPosition: toControlPosition
 }

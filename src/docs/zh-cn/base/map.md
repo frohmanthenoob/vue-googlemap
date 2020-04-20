@@ -10,7 +10,14 @@
 
   <template>
     <div class="map-page-container">
-      <vue-map ref="map" vid="mapDemo" :map-manager="mapManager" :center="center" :zoom="zoom" :events="events" class="map-demo">
+      <vue-map 
+        ref="map" 
+        vid="mapDemo" 
+        :map-manager="mapManager"
+        :center="center" 
+        :zoom="zoom" 
+        :events="events" 
+        class="map-demo">
       </vue-map>
 
       <div class="toolbar">
@@ -85,8 +92,11 @@ rotateEnable | Boolean  | 地图是否可旋转，默认false。
 dragEnable | Boolean  | 	地图是否可通过鼠标拖拽平移，默认为true。
 zoomEnable | Boolean  | 	地图是否可缩放，默认值为true。
 zoom | Number | 地图显示级别
-zooms | Array | 地图显示的缩放级别范围，默认范围[0,18]，取值范围[0-18]
+zooms | Array | 地图显示的缩放级别范围，默认范围[0,22]，取值范围[0-22]
 center | Array | 地图中心点坐标值
+fullscreenControl | Boolean | 是否可全屏
+disableDefaultUi | Boolean | 是否禁用默认UI
+mapTypeId | String | 地图类型。hybrid\|roadmap\|satellite\|terrain
 
 ## MapManager
 
@@ -104,6 +114,7 @@ getChildInstance| vid | instance | 返回 vid 对应的组件实例
 ---|---|---|
 $$getInstance() | [google.maps.Map](https://developers.google.cn/maps/documentation/javascript/reference/map) | 获取地图实例
 $$getCenter()   | [lng: Number, lat: Number] | 获取地图中心
+$$getZoom()     | Number | 获取地图缩放等级
 
 
 ## 事件
