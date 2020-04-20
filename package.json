@@ -4,7 +4,11 @@
   "description": "vue googlemap",
   "keywords": [
     "googlemap",
-    "vue"
+    "vue",
+    "vue-googlemap",
+    "vue googlemap",
+    "vue google map",
+    "googlemap vue"
   ],
   "main": "./dist/index.js",
   "sideEffects": false,
