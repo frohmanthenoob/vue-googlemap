@@ -23,4 +23,5 @@
    
  - 窗体
    - [信息窗体 - 切换](zh-cn/examples/windows/info-window.md)
+   - [信息窗体 - 多窗口](zh-cn/examples/windows/info-window-multi.md)
    - [信息窗体 - 自定义样式](zh-cn/examples/windows/info-window-custom-content.md)

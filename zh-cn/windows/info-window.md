@@ -110,7 +110,7 @@ vid | String | 组件的ID。
 autoMove | Boolean | 是否自动调整窗体到视野内（当信息窗体超出视野范围时，通过该属性设置是否自动平移地图，使信息窗体完全显示）
 offset | Array | 相对于基点的偏移量。默认情况是信息窗体的底部中心点(BOTTOM_CENTER) 和基点之间的偏移量
 position | Array | 信息窗体显示基点位置
-visible | Boolean | 信息窗体是否显示。**这里需要注意的是，地图只支持同时一个信息窗体的显示**。所以一旦有窗体显示切换的场景，visible数组的状态需要自行维护。
+visible | Boolean | 信息窗体是否显示，支持 .sync 修饰符。**支持多个信息窗体的显示**
 zIndex | Number | 层叠顺序
 
 
