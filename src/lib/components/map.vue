@@ -36,7 +36,7 @@ export default {
   props: {
     vid: String,
     backgroundColor: String,
-    center: Object,
+    center: [Array, Object],
     clickableIcons: Boolean,
     controlSize: Number,
     disableDefaultUi: Boolean,
