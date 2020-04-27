@@ -97,6 +97,7 @@ center | Array | 地图中心点坐标值
 fullscreenControl | Boolean | 是否可全屏
 disableDefaultUi | Boolean | 是否禁用默认UI
 mapTypeId | String | 地图类型。hybrid\|roadmap\|satellite\|terrain
+bounds | Array | v>=0.2.0。地图边界设置，设置之后地图将调整缩放等级和中心点并最终包含此边界
 
 ## MapManager
 
