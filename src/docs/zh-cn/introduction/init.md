@@ -13,7 +13,8 @@ import VueMap from '@vue-map/google';
 
 Vue.use(VueMap);
 VueMap.initMapApiLoader({
-  key: 'YOUR_KEY'
+  key: 'YOUR_KEY',
+  language: ''
 });
 ```
 
@@ -29,7 +30,8 @@ import { lazyMapApiLoaderInstance } from '@vue-map/google';
 
 Vue.use(VueMap);
 VueMap.initMapApiLoader({
-  key: 'YOUR_KEY'
+  key: 'YOUR_KEY',
+  language: ''
 });
 
 lazyMapApiLoaderInstance.load().then(() => {
@@ -44,4 +46,5 @@ lazyMapApiLoaderInstance.load().then(() => {
 
 参数名  | 类型  |  默认值 | 描述 |
 --- | --- | --- | --- |
-key | `String` | `` | 谷歌 Key |
+key | `String` |  | 谷歌 Key |
+language | `String` |  | 地图语言 |

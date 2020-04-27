@@ -92,7 +92,8 @@ export default {
     zoomEnable: Boolean,
     zoomControlOptions: Object,
     events: Object,
-    mapManager: Object
+    mapManager: Object,
+    bounds: Array
   },
 
   beforeCreate() {
@@ -132,6 +133,11 @@ export default {
             minZoom: arr[0],
             maxZoom: arr[1]
           })
+        },
+        bounds(val) {
+          if (val) {
+            this.fitBounds(val)
+          }
         }
       }
     }

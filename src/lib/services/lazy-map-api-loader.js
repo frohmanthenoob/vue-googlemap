@@ -3,7 +3,9 @@ const DEFAULT_MAP_CONFIG = {
   key: null,
   protocol: 'https',
   hostAndPath: 'maps.googleapis.com/maps/api/js',
-  callback: 'mapInitComponent'
+  callback: 'mapInitComponent',
+  language: null,
+  region: null
 }
 
 export default class MapAPILoader {
@@ -45,7 +47,7 @@ export default class MapAPILoader {
   _getScriptSrc() {
 
     const config = this._config
-    const paramKeys = ['key', 'callback']
+    const paramKeys = ['key', 'callback', 'language', 'region']
 
     const params = Object.keys(config)
       .filter(k => ~paramKeys.indexOf(k))

@@ -34,7 +34,10 @@ export function lngLatTo(lngLat) {
  * @param arrs 二重数组 southWest, northEast
  */
 export function toBounds(arrs) {
-  return new google.maps.LatLngBounds(toLngLat(arrs[0]), toLngLat(arrs[1]))
+  if (Array.isArray(arrs)) {
+    return new google.maps.LatLngBounds(toLngLat(arrs[0]), toLngLat(arrs[1]))
+  }
+  return arrs
 }
 
 export function boundsTo(bounds) {
@@ -48,7 +51,7 @@ export function toIcon(options) {
       url: options
     }
   } else if (options['image']) {
-    // 高德的icon配置
+    // 兼容高德的icon配置
     const {
       size,
       imageOffset,

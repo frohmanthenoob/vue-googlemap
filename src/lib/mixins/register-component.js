@@ -154,7 +154,7 @@ export default {
 
     // some prop can not init by initial created methods
     initProps() {
-      const props = ['zooms']
+      const props = ['zooms', 'bounds']
 
       props.forEach(propStr => {
         if (this[propStr] !== undefined) {

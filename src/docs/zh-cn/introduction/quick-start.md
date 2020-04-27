@@ -44,7 +44,8 @@ Vue.config.productionTip = false
 
 Vue.use(VueMap)
 VueMap.initMapApiLoader({
-  key: 'AIzaSyD9aX2PDz6T6KZPshz1-ETbnqSKUIy5QYg'
+  key: 'YOUR_API_KEY',
+  language: ''
 })
 
 new Vue({
