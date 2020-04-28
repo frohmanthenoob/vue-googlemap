@@ -122,6 +122,8 @@ $$getZoom()     | Number | 获取地图缩放等级
 
 事件 | 参数 | 说明
 ---|---|---|
+init | [google.maps.Map](https://developers.google.cn/maps/documentation/javascript/reference/map) | 组件初始化
+destroyed | [google.maps.Map](https://developers.google.cn/maps/documentation/javascript/reference/map) | 组件销毁
 click |[MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) |鼠标左键单击事件
 dblclick |[MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) |鼠标左键双击事件
 center_changed | |地图中心点改变时触发事件

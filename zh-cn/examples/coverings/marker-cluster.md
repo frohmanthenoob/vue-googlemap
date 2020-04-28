@@ -45,6 +45,7 @@ import MarkerClusterer from '@google/markerclustererplus';
     module.exports = {
       data: function() {
         let self = this;
+        let imgUrl = 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/'
 
         return {
           zoom: 12,
@@ -57,32 +58,32 @@ import MarkerClusterer from '@google/markerclustererplus';
               self.clusterer = new MarkerClusterer(map, self.markerRefs, {
                 styles: [
                   {
-                    url: '/assets/images/m1.png',
+                    url: `${imgUrl}m1.png`,
                     width: 52,
                     height: 52,
                     // [y, x]
                     anchorText: [20, 0]
                   },
                   {
-                    url: '/assets/images/m2.png',
+                    url: `${imgUrl}m2.png`,
                     width: 56,
                     height: 56,
                     anchorText: [22, 0]
                   },
                   {
-                    url: '/assets/images/m3.png',
+                    url: `${imgUrl}m3.png`,
                     width: 66,
                     height: 66,
                     anchorText: [27, 0]
                   },
                   {
-                    url: '/assets/images/m4.png',
+                    url: `${imgUrl}m4.png`,
                     width: 78,
                     height: 78,
                     anchorText: [33, 0]
                   },
                   {
-                    url: '/assets/images/m5.png',
+                    url: `${imgUrl}m5.png`,
                     width: 90,
                     height: 90,
                     anchorText: [40, 0]

@@ -102,7 +102,8 @@ $$getRadius() | Number | 获取半径
 
 事件 | 参数 | 说明
 ---|---|---|
-init | Object | 组件实例
+init | [google.maps.Circle](https://developers.google.cn/maps/documentation/javascript/reference/polygon#Circle) | 组件初始化
+destroyed | [google.maps.Circle](https://developers.google.cn/maps/documentation/javascript/reference/polygon#Circle) | 组件销毁
 click | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标左键单击事件
 dblclick | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标左键双击事件
 rightclick | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 右键单击
