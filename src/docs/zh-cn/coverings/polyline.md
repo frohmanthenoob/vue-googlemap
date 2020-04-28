@@ -149,7 +149,8 @@ $$getPath() | [ [lng:Number, lat:Number] ] | 获取 `polyline` 获取折线路�
 
 事件 | 参数 | 说明
 ---|---|---|
-init | Object | 组件实例
+init | [google.maps.Polyline](https://developers.google.cn/maps/documentation/javascript/reference/polygon#Polyline) | 组件初始化
+destroyed | [google.maps.Polyline](https://developers.google.cn/maps/documentation/javascript/reference/polygon#Polyline) | 组件销毁
 click | [PolyMouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/polygon#PolyMouseEvent) | 鼠标左键单击事件
 dblclick | [PolyMouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/polygon#PolyMouseEvent) | 鼠标左键双击事件
 rightclick | [PolyMouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/polygon#PolyMouseEvent) | 右键单击

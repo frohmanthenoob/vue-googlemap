@@ -125,7 +125,8 @@ $$getInstance() | [google.maps.InfoWindow](https://developers.google.cn/maps/doc
 
 事件 | 参数 | 说明
 ---|---|---|
-init | Object | 组件实例
+init | [google.maps.InfoWindow](https://developers.google.cn/maps/documentation/javascript/reference/info-window) | 组件初始化
+destroyed | [google.maps.InfoWindow](https://developers.google.cn/maps/documentation/javascript/reference/info-window) | 组件销毁
 closeclick||信息窗体关闭按钮点击之后触发事件
 position_changed||position属性发生变化时
 zindex_changed||zindex属性发生变化时

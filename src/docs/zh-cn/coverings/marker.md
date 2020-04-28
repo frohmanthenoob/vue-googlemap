@@ -122,14 +122,15 @@ opacity | Number | 不透明度[0, 1]
 
 函数 | 返回 | 说明
 ---|---|---|
-$$getInstance() | [AMap.Marker](http://lbs.amap.com/api/javascript-api/reference/overlay#Marker) | 获取`marker`实例
+$$getInstance() | [google.maps.Marker](https://developers.google.cn/maps/documentation/javascript/reference/marker) | 获取`marker`实例
 $$getPosition() | [lng:Number,lat:Number] | 获取位置
 
 ## 事件
 
 事件 | 参数 | 说明
 ---|---|---|
-init | Object | 组件实例
+init | [google.maps.Marker](https://developers.google.cn/maps/documentation/javascript/reference/marker) | 组件初始化
+destroyed | [google.maps.Marker](https://developers.google.cn/maps/documentation/javascript/reference/marker) | 组件销毁
 click | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标左键单击事件
 dblclick | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标左键双击事件
 rightclick | [MouseEvent](https://developers.google.cn/maps/documentation/javascript/reference/map#MouseEvent) | 鼠标右键单击事件
